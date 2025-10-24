@@ -24,4 +24,6 @@ auto Lexer::search(const char target, const std::initializer_list<char> &list) n
       return true;
     }
   }
+
+  return false;
 }
