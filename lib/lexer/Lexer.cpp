@@ -9,8 +9,6 @@ auto Lexer::run(std::string &&source_core) noexcept -> std::expected< std::vecto
 
   std::vector<token::Token> ret{};
 
-  std::string last_word;
-
   for (const char source_code_char : source_core) {
     if (search(source_code_char, FORBIDDEN_CHARS)) [[unlikely]] {
       return std::unexpected {ErrorKind::ForbiddenSymbol};
