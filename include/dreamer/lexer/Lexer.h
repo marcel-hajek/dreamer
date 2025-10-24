@@ -13,5 +13,5 @@ public:
   [[nodiscard]] static auto run(std::string &&source_core) noexcept -> std::expected< std::vector<token::Token>, ErrorKind>;
 
 private:
-
+  [[nodiscard]] static auto search(const char target, const std::initializer_list<char> &list) noexcept -> bool;
 };
