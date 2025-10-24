@@ -19,8 +19,8 @@ auto Lexer::run(std::string &&source_core) noexcept -> std::expected< std::vecto
 }
 
 auto Lexer::search(const char target, const std::initializer_list<char> &list) noexcept -> bool {
-  for (const auto forbidden_char : list) {
-    if (target == forbidden_char) [[unlikely]] {
+  for (auto &&list_char : list) {
+    if (target == list_char) {
       return true;
     }
   }
